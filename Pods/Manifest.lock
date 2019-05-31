@@ -1,0 +1,28 @@
+PODS:
+  - ActionSheetPicker-3.0 (2.3.0)
+  - Highlightr (2.1.0)
+
+DEPENDENCIES:
+  - ActionSheetPicker-3.0 (~> 2.3.0)
+  - Highlightr (from `https://github.com/JiachenRen/Highlightr.git`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ActionSheetPicker-3.0
+
+EXTERNAL SOURCES:
+  Highlightr:
+    :git: https://github.com/JiachenRen/Highlightr.git
+
+CHECKOUT OPTIONS:
+  Highlightr:
+    :commit: 5125a73766babcd146dcadc9ad6327aaa91a9240
+    :git: https://github.com/JiachenRen/Highlightr.git
+
+SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
+  Highlightr: 595f3e100737c8de41113385da8bd0b5b65212c6
+
+PODFILE CHECKSUM: 99f8e6edbdc0f935363ed78bd6461125e6d40ad5
+
+COCOAPODS: 1.5.3
