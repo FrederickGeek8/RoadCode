@@ -15,7 +15,7 @@
 		B683002A2269043000C27666 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B68300282269043000C27666 /* Main.storyboard */; };
 		B683002C2269043000C27666 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B683002B2269043000C27666 /* Assets.xcassets */; };
 		B683002F2269043000C27666 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B683002D2269043000C27666 /* LaunchScreen.storyboard */; };
-		B683003722690C8900C27666 /* blank.txt in Resources */ = {isa = PBXBuildFile; fileRef = B683003622690C8900C27666 /* blank.txt */; };
+		B683003722690C8900C27666 /* Untitled.txt in Resources */ = {isa = PBXBuildFile; fileRef = B683003622690C8900C27666 /* Untitled.txt */; };
 		B6932448226951C700B0E77D /* LineNumberTextViewWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B6932442226951C700B0E77D /* LineNumberTextViewWrapper.m */; };
 		B6932449226951C700B0E77D /* LineNumberTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6932444226951C700B0E77D /* LineNumberTextView.m */; };
 		B693244A226951C700B0E77D /* LineNumberLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B6932446226951C700B0E77D /* LineNumberLayoutManager.m */; };
@@ -36,7 +36,7 @@
 		B683002B2269043000C27666 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B683002E2269043000C27666 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B68300302269043000C27666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B683003622690C8900C27666 /* blank.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = blank.txt; sourceTree = "<group>"; };
+		B683003622690C8900C27666 /* Untitled.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Untitled.txt; sourceTree = "<group>"; };
 		B683004522691F6000C27666 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 		B6932442226951C700B0E77D /* LineNumberTextViewWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineNumberTextViewWrapper.m; sourceTree = "<group>"; };
 		B6932443226951C700B0E77D /* LineNumberLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineNumberLayoutManager.h; sourceTree = "<group>"; };
@@ -46,6 +46,7 @@
 		B6932447226951C700B0E77D /* LineNumberTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineNumberTextView.h; sourceTree = "<group>"; };
 		B693244B22696AA500B0E77D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B6AA8076228B40C10025CA34 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		B6DEC64722A1F72100AA9379 /* RoadCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RoadCode.entitlements; sourceTree = "<group>"; };
 		B6FDFE3C228AA2E7008F3FFF /* LanguageBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageBridge.swift; sourceTree = "<group>"; };
 		F5ABD4EB9A502B53381274A6 /* Pods_RoadCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoadCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -100,6 +101,7 @@
 		B683001F2269043000C27666 /* RoadCode */ = {
 			isa = PBXGroup;
 			children = (
+				B6DEC64722A1F72100AA9379 /* RoadCode.entitlements */,
 				B68300202269043000C27666 /* AppDelegate.swift */,
 				B68300222269043000C27666 /* DocumentBrowserViewController.swift */,
 				B6FDFE3C228AA2E7008F3FFF /* LanguageBridge.swift */,
@@ -109,7 +111,7 @@
 				B6932441226951C700B0E77D /* LineNumberTextView */,
 				B683004522691F6000C27666 /* Bridge.h */,
 				B68300262269043000C27666 /* Document.swift */,
-				B683003622690C8900C27666 /* blank.txt */,
+				B683003622690C8900C27666 /* Untitled.txt */,
 				B68300282269043000C27666 /* Main.storyboard */,
 				B683002B2269043000C27666 /* Assets.xcassets */,
 				B683002D2269043000C27666 /* LaunchScreen.storyboard */,
@@ -165,6 +167,11 @@
 				TargetAttributes = {
 					B683001C2269043000C27666 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -194,7 +201,7 @@
 				B683002F2269043000C27666 /* LaunchScreen.storyboard in Resources */,
 				B683002C2269043000C27666 /* Assets.xcassets in Resources */,
 				B683002A2269043000C27666 /* Main.storyboard in Resources */,
-				B683003722690C8900C27666 /* blank.txt in Resources */,
+				B683003722690C8900C27666 /* Untitled.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
