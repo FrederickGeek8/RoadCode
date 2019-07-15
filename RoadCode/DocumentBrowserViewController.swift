@@ -47,15 +47,33 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
     // MARK: UIDocumentBrowserViewControllerDelegate
     
     func documentBrowser(_ controller: UIDocumentBrowserViewController, didRequestDocumentCreationWithHandler importHandler: @escaping (URL?, UIDocumentBrowserViewController.ImportMode) -> Void) {
-        let newDocumentURL: URL? = Bundle.main.url(forResource: "Untitled", withExtension: "txt")
+        let alert = UIAlertController(title: "Create Document", message: "Please choose a filename", preferredStyle: UIAlertController.Style.alert)
         
-        // Set the URL for the new document here. Optionally, you can present a template chooser before calling the importHandler.
-        // Make sure the importHandler is always called, even if the user cancels the creation request.
-        if newDocumentURL != nil {
-            importHandler(newDocumentURL, .copy )
-        } else {
-            importHandler(nil, .none)
+        alert.addTextField { (textField) in
+            textField.text = "Untitled.txt"
         }
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+            importHandler(nil, .none)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            let fileName = alert.textFields![0].text
+            let tmp = URL(fileURLWithPath: NSTemporaryDirectory())
+            let newDocumentURL = tmp.appendingPathComponent(fileName!)
+            
+            do {
+                try FileManager.default.copyItem(at: Bundle.main.url(forResource: "Untitled", withExtension: "txt")!, to: newDocumentURL)
+            } catch _ {
+                let fail = UIAlertController(title: "Failure", message: "Error creating file", preferredStyle: .alert)
+                fail.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                importHandler(nil, .none)
+            }
+            
+            importHandler(newDocumentURL, .copy)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func documentBrowser(_ controller: UIDocumentBrowserViewController, didPickDocumentsAt documentURLs: [URL]) {
