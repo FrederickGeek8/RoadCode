@@ -33,7 +33,7 @@ class SettingsViewController: UITableViewController {
         if indexPath.row == 0 {
             let themes = Highlightr()?.availableThemes()
             
-            let selected = themes?.index(of: UserDefaults.standard.string(forKey: "theme") ?? "vs") ?? 0
+            let selected = themes?.firstIndex(of: UserDefaults.standard.string(forKey: "theme") ?? "vs") ?? 0
             
             ActionSheetStringPicker.show(withTitle: "Pick a Theme",
                                          rows: themes,

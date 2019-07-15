@@ -20,7 +20,7 @@ extension UITextView {
     @objc
     func changeLanguage() {
         let languages = Highlightr()?.supportedLanguages()
-        let selected = languages?.index(of: UserDefaults.standard.string(forKey: "language") ?? "swift") ?? 0
+        let selected = languages?.firstIndex(of: UserDefaults.standard.string(forKey: "language") ?? "swift") ?? 0
         
         ActionSheetStringPicker.show(withTitle: "Pick a Language",
                                      rows: languages,
